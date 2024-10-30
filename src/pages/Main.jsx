@@ -1,9 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 const Main = () => {
-  useEffect(()=>{
+  const [notes, setNotes] = useState([]);
+  useEffect(() => {
     fetch("")
-  },[])
-  return <></>;
+      .then((res) => res.json())
+      .then((data) => setNotes(data));
+  }, []);
+  return (
+    <>
+      <div>
+        {notes.map((note) => (
+          <p key={note.id}>{note.title}</p>
+        ))}
+      </div>
+    </>
+  );
 };
 export default Main;
