@@ -20,7 +20,13 @@ function App() {
     palette: {
       mode: darkMode ? "dark" : "light",
     },
+    typography: {
+      fontFamily: "Croissant One",
+      fontSize: 18,
+      fontWeightRegular: 100,
+    },
   });
+
   const toggleTheme = () => {
     setDarkMode((prevState) => !prevState);
   };
