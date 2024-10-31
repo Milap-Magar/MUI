@@ -23,8 +23,7 @@ function App() {
     },
     typography: {
       fontFamily: "Croissant One",
-      fontSize: 18,
-      fontWeightRegular: 100,
+      fontSize: 8,
     },
   });
 
