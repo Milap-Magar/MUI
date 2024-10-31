@@ -8,7 +8,7 @@ import {
 import { DeleteOutlined } from "@mui/icons-material";
 import React from "react";
 
-const NoteCard = ({ note }) => {
+const NoteCard = ({ note, handleDelete }) => {
   return (
     <>
       <Card elevation={2}>
