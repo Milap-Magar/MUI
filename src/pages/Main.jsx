@@ -1,14 +1,10 @@
 import { Grid2, Paper, Typography, Container } from "@mui/material";
 import React, { useEffect, useState } from "react";
+import useFetachData from "../components/hooks/useFetchData";
 
 const Main = () => {
-  const [notes, setNotes] = useState([]);
 
-  useEffect(() => {
-    fetch("https://data-1-w6fe.onrender.com/notes")
-      .then((res) => res.json())
-      .then((data) => setNotes(data));
-  }, []);
+  const notes = useFetachData();
 
   return (
     <Container maxWidth="lg" sx={{ paddingY: 4 }}>
