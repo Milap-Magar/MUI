@@ -17,5 +17,5 @@ export default function useDeleteData() {
     }
 }
 
-  return { handleDelete };
+  return handleDelete;
 }
